@@ -61,6 +61,122 @@ h2 {
   /* ... el resto de estilos que ya tienes ... */
 }
 
+/* --- SECCIÓN PROYECTOS: COFRE --- */
+#proyectos {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.cofre-proyectos {
+  background: linear-gradient(145deg, #6B4423, #8B5A2B); /* Madera oscura */
+  border: 4px solid #4A2511;
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5), 
+              inset 0 2px 4px rgba(255, 215, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+
+.cofre-proyectos:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 18px rgba(0,0,0,0.6), 
+              inset 0 2px 4px rgba(255, 215, 0, 0.3);
+}
+
+.titulo-cofre {
+  font-family: 'MedievalSharp', cursive;
+  color: #FFD700;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px #000;
+  margin: 0 0 10px 0;
+}
+
+.icono-cofre {
+  font-size: 48px;
+  margin: 10px 0;
+  transition: transform 0.4s;
+}
+
+.texto-cofre {
+  font-family: 'Lora', serif;
+  color: #F5DEB3;
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Contenido oculto por defecto */
+.contenido-cofre {
+  max-height: 0; /* Oculto */
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  background: rgba(244, 230, 211, 0.3); /* Pergamino semitransparente */
+  border: 2px solid #8B4513;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-width: 396px; /* 400px - bordes */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.lista-proyectos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.lista-proyectos li {
+  margin: 15px 0;
+}
+
+.lista-proyectos a {
+  display: block;
+  background: #8B4513;
+  color: #FFD700;
+  padding: 12px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  border: 2px solid #4A2511;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.lista-proyectos a:hover {
+  background: #A0522D;
+  transform: translateX(5px);
+}
+
+.item-icono {
+  margin-right: 10px;
+}
+
+/* --- ESTADO ABIERTO --- */
+.cofre-proyectos.abierto {
+  border-radius: 8px 8px 0 0; /* Quita borde inferior cuando está abierto */
+}
+
+.cofre-proyectos.abierto .icono-cofre {
+  transform: rotateY(180deg); /* El cofre "se da vuelta" */
+}
+
+.cofre-proyectos.abierto .texto-cofre::after {
+  content: " - Clic para cerrar";
+}
+
+.contenido-cofre.abierto {
+  max-height: 500px; /* Suficiente para mostrar todo */
+  padding: 20px;
+}
+
+
+
+
 /* STATS */
 .titulo-stats {
   color: #FFD700;
@@ -327,79 +443,43 @@ html {
   margin: 0;
 }
 
-/* --- RESPONSIVE: TABLET Y CELULAR --- */
-@media (max-width: 900px) {
-  /* Header: Título arriba, menú abajo */
-  .texto {
-    flex-direction: column; /* Apila el h1 y el nav */
-    align-items: flex-start; /* Alinea todo a la izquierda */
-    gap: 15px; /* Espacio entre título y botones */
-    padding: 15px 20px;
-  }
+/* --- BOTÓN HAMBURGUESA --- */
+.menu-toggle {
+  display: none; /* Oculto en PC */
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
 
-  .texto h1 {
-    font-size: 32px; /* Título más chico para que quepa */
-  }
-
-  /* Menú: Permite que los botones bajen a 2 filas si no caben */
-  .nav-principal ul {
-    flex-wrap: wrap; /* Ahora sí dejamos que se parta en móvil */
-    gap: 8px;
-  }
-
-  .nav-principal a {
-    font-size: 12px; /* Botones más compactos */
-    padding: 5px 10px;
-  }
-    /* SOBRE MI: En tablet/móvil se apilan */
-  
-  #sobre-mi h2{
-    text-align: center;
-  }
-    .sobre-mi-cont {
-    flex-direction: column; /* Imagen arriba, texto abajo */
-    align-items: center; /* Centra la foto */
-    gap: 20px;
-  }
-  .sobre-mi-tex{
-    padding-top: 0;
-  }
-  .sobre-mi-tex p {
-    text-align: center; /* Texto centrado se ve mejor en móvil */
-    font-size: 16px;
-  }
-  .foto-perfil{
-    width: 140px;
-    height: 140px;
-  }
+.menu-toggle .barra {
+  width: 25px;
+  height: 3px;
+  background-color: #FFD700; /* Dorado */
+  transition: 0.3s;
+  border-radius: 2px;
 }
 
 
-/* --- RESPONSIVE: SOLO CELULAR CHICO --- */
-@media (max-width: 500px) {
-  .texto h1 {
-    font-size: 26px; /* Aún más chico */
-    line-height: 1.1;
-  }
 
-  .contenedor-principal {
-    padding: 20px; /* Menos padding lateral en móvil */
-  }
-
-  .foto-perfil {
-    width: 120px;
-    height: 120px; /* Foto más chica */
-  }
-
-  h2 {
-    font-size: 26px; /* STATS, PROYECTOS más chicos */
-  }
-  
-  /* Las barras de STATS ocupan todo el ancho */
-  .barra-fondo {
-    width: 100%;
-  }
+/* Animación de la hamburguesa a X cuando está abierto */
+.menu-toggle.activo .barra:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
+.menu-toggle.activo .barra:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.activo .barra:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+  
+  
+
+
+
 
 /* --- SECCIÓN SOBRE MI --- */
 #sobre-mi h2{
@@ -434,4 +514,101 @@ html {
   text-align: left;
   font-size: 18px;
   line-height: 1.7; 
+}
+
+/* --- RESPONSIVE: TABLET Y CEL --- */
+@media (max-width: 900px) {
+  .texto {
+    flex-wrap: wrap; /* Permite que el nav baje */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .texto h1 {
+    font-size: 28px;
+  }
+
+  /* Muestra la hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+
+ /* Oculta el menú por defecto */
+  .nav-principal {
+    display: none; /* Oculto hasta que le den clic */
+    width: 100%; /* Ocupa todo el ancho debajo */
+    order: 3; /* Se va debajo del título y la hamburguesa */
+  }
+
+  /* Cuando tiene la clase .activo, se muestra */
+  .nav-principal.activo {
+    display: block;
+  }
+
+  .nav-principal ul {
+    flex-direction: column; /* Botones en columna */
+    width: 100%;
+    gap: 0;
+    margin-top: 15px;
+  }
+
+  .nav-principal li {
+    width: 100%;
+  }
+#sobre-mi h2{
+    text-align: center;
+  }
+    .sobre-mi-cont {
+    flex-direction: column; /* Imagen arriba, texto abajo */
+    align-items: center; /* Centra la foto */
+    gap: 20px;
+  }
+  .sobre-mi-tex{
+    padding-top: 0;
+  }
+  .sobre-mi-tex p {
+    text-align: center; /* Texto centrado se ve mejor en móvil */
+    font-size: 16px;
+  }
+  .foto-perfil{
+    width: 140px;
+    height: 140px;
+  }
+
+  .nav-principal a {
+    display: block; /* Que todo el botón sea clickeable */
+    text-align: center;
+    padding: 12px;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  }
+  
+  .nav-principal li:last-child a {
+    border-bottom: none;
+  }
+}
+/* --- RESPONSIVE: SOLO CELULAR CHICO --- */
+@media (max-width: 500px) {
+  .texto h1 {
+    font-size: 26px; /* Aún más chico */
+    line-height: 1.1;
+  }
+
+  .contenedor-principal {
+    padding: 20px; /* Menos padding lateral en móvil */
+  }
+
+  .foto-perfil {
+    width: 120px;
+    height: 120px; /* Foto más chica */
+  }
+
+  h2 {
+    font-size: 26px; /* STATS, PROYECTOS más chicos */
+  }
+  
+  /* Las barras de STATS ocupan todo el ancho */
+  .barra-fondo {
+    width: 100%;
+  }
 }

@@ -23,6 +23,14 @@
 
     <header class="texto">
         <h1>Portafolio JEAS</h1>
+
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+        </button>
+
         <nav class="nav-principal">
             <ul>
                 <li><a href="#sobre-mi">About me</a></li>
@@ -40,8 +48,8 @@
 
                 <h2>Sobre mi</h2>
                 <div class="sobre-mi-cont">
-                    
-                    <img src="public/img/me.webp" alt="jeas" class="foto-perfil" >
+
+                    <img src="public/img/me.webp" alt="jeas" class="foto-perfil">
                     <div class="sobre-mi-tex">
                         <p>Mi nombre es jhonatan ayala,soy coder en formacion,actualmente me encuentro realizando una
                             actividad
@@ -57,20 +65,36 @@
             <br>
 
 
-            <section id="Proyectos">
-                <h3>Proyectos</h3>
+            <section id="proyectos">
+                <!-- El cofre que hace de botón -->
+                <div class="cofre-proyectos">
+                    <h3 class="titulo-cofre">PROYECTOS</h3>
+                    <div class="icono-cofre">📦</div> <!-- Cambia por img si tienes una de cofre -->
+                    <p class="texto-cofre">Haz clic para abrir el cofre</p>
+                </div>
 
-
-                <ul>
-                    <li> <a href="https://github.com/jhonnyelithAZ/Inventario_3.0.git" target="_blank">Inventario
-                            3.0</a></li>
-                    <li><a href="https://github.com/jhonnyelithAZ/student_manager.git" target="_blank">student
-                            manager</a></li>
-                    <li><a href="https://github.com/jhonnyelithAZ/practica_colecciones.git" target="_blank">Practica
-                            de colecciones</a>
-                    </li>
-                </ul>
+                <!-- El contenido oculto dentro del cofre -->
+                <div class="contenido-cofre">
+                    <ul class="lista-proyectos">
+                        <li>
+                            <a href="https://github.com/jhonnyelithAZ/Inventario_3.0.git" target="_blank">
+                                <span class="item-icono">⚔️</span> Inventario 3.0
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jhonnyelithAZ/student_manager.git" target="_blank">
+                                <span class="item-icono">📜</span> Student Manager
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jhonnyelithAZ/practica_colecciones.git" target="_blank">
+                                <span class="item-icono">💎</span> Práctica de Colecciones
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </section>
+
             <section id="stats" class="panel-stats">
                 <h2 class="titulo-stats">STATS</h2>
 
@@ -149,6 +173,7 @@
 
 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
