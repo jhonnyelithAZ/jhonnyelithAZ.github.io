@@ -1,0 +1,614 @@
+
+/* Al inicio de tu CSS */
+* {
+  box-sizing: border-box; /* Evita que el padding rompa el layout */
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'lora',serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #2c1e12;
+}
+img {
+  max-width: 100%; /* Ninguna imagen se sale del contenedor */
+  height: auto;
+}
+
+
+
+/* --- FUENTES ESTILO OBLIVION --- */
+body {
+  font-family: 'Lora', serif; /* Para todo el texto normal */
+  font-size: 17px; /* Un poco más grande se lee mejor */
+  line-height: 1.6;
+  color: #2c1e12; /* Tu marrón oscuro */
+}
+
+/* TÍTULOS PRINCIPALES - Estilo Oblivion */
+h1, h2, h3, .titulo-stats {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: #5C3317; /* Madera oscura */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  letter-spacing: 1px; /* Separación elegante entre letras */
+}
+
+h1 {
+  font-size: 42px; /* Portafolio JEAS más épico */
+}
+
+h2 {
+  font-size: 32px; /* STATS, Proyectos, Contactos */
+}
+
+/* TU HEADER */
+.texto h1 {
+  font-family: 'Cinzel', serif;
+  color: #FFD700; /* Dorado */
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* BOTONES DEL NAV - También con Cinzel */
+.nav-principal a {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* About me -> ABOUT ME */
+  font-size: 14px; /* Más chico porque las mayúsculas ocupan más */
+  /* ... el resto de estilos que ya tienes ... */
+}
+
+/* --- SECCIÓN PROYECTOS: COFRE --- */
+#proyectos {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.cofre-proyectos {
+  background: linear-gradient(145deg, #6B4423, #8B5A2B); /* Madera oscura */
+  border: 4px solid #4A2511;
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5), 
+              inset 0 2px 4px rgba(255, 215, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+
+.cofre-proyectos:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 18px rgba(0,0,0,0.6), 
+              inset 0 2px 4px rgba(255, 215, 0, 0.3);
+}
+
+.titulo-cofre {
+  font-family: 'MedievalSharp', cursive;
+  color: #FFD700;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px #000;
+  margin: 0 0 10px 0;
+}
+
+.icono-cofre {
+  font-size: 48px;
+  margin: 10px 0;
+  transition: transform 0.4s;
+}
+
+.texto-cofre {
+  font-family: 'Lora', serif;
+  color: #F5DEB3;
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Contenido oculto por defecto */
+.contenido-cofre {
+  max-height: 0; /* Oculto */
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  background: rgba(244, 230, 211, 0.3); /* Pergamino semitransparente */
+  border: 2px solid #8B4513;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-width: 396px; /* 400px - bordes */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.lista-proyectos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.lista-proyectos li {
+  margin: 15px 0;
+}
+
+.lista-proyectos a {
+  display: block;
+  background: #8B4513;
+  color: #FFD700;
+  padding: 12px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  border: 2px solid #4A2511;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.lista-proyectos a:hover {
+  background: #A0522D;
+  transform: translateX(5px);
+}
+
+.item-icono {
+  margin-right: 10px;
+}
+
+/* --- ESTADO ABIERTO --- */
+.cofre-proyectos.abierto {
+  border-radius: 8px 8px 0 0; /* Quita borde inferior cuando está abierto */
+}
+
+.cofre-proyectos.abierto .icono-cofre {
+  transform: rotateY(180deg); /* El cofre "se da vuelta" */
+}
+
+.cofre-proyectos.abierto .texto-cofre::after {
+  content: " - Clic para cerrar";
+}
+
+.contenido-cofre.abierto {
+  max-height: 500px; /* Suficiente para mostrar todo */
+  padding: 20px;
+}
+
+
+
+
+/* STATS */
+.titulo-stats {
+  color: #FFD700;
+  text-shadow: 2px 2px 3px #000;
+  font-size: 36px;
+}
+
+.stat-nombre {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+a {
+    color: rgb(139, 37, 37);
+    text-decoration: none;
+
+
+}
+
+a:hover {
+    color: red;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    width: 150px;
+    margin-right: 10px;
+    text-align: left;
+
+}
+
+.form-group input {
+    width: 200px;
+    padding: 5px;
+}
+
+button[type="submit"] {
+    background-color: rgb(168, 92, 92);
+    color: rgb(73, 73, 73);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(139, 37, 37);
+}
+
+.titulo {
+    color: rgb(139, 37, 37);
+}
+
+.parrafo {
+    max-width: 500px;
+    margin: 0 left;
+    text-align: justify;
+}
+
+.parrafo p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.fondo {
+    background-attachment: fixed;
+    background-image: url("public/img/back.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+}
+.foto-perfil{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #333;
+}
+.contenedor-principal{
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+
+/* --- PANEL DE STATS RPG --- */
+.panel-stats {
+  margin: 40px 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 3px solid #8B4513;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  
+}
+
+.titulo-stats {
+  text-align: center;
+  color: #FFD700;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  font-size: 28px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-icono {
+  font-size: 32px; /* Tamaño de los emojis */
+}
+
+.stat-info {
+  width: 100%;
+}
+
+.stat-nombre {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.barra-fondo {
+  width: 100%;
+  height: 22px;
+  background-color: #222;
+  border: 2px solid #8B4513;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.barra-progreso {
+  height: 100%;
+  background: linear-gradient(90deg, #C0392B, #E74C3C);
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000;
+}
+
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #8B4513;
+}
+/* --- FLEXBOX PARA LAS MASCOTAS --- */
+.mascota-card {
+  display: flex; /* Esto pone imagen y texto lado a lado */
+  gap: 30px; /* Espacio entre la imagen y el texto */
+  align-items: flex-start; /* Alinea todo arriba */
+  margin-bottom: 40px; /* Espacio entre Kirby y Agumon */
+  background-color: rgba(0, 0, 0, 0.15); /* Fondo sutil tipo pergamino */
+  border: 2px solid #8B4513;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.mascota-img {
+  width: 200px; /* Ancho fijo para todas las imágenes */
+  height: 200px;
+  object-fit: cover; /* Para que no se deformen */
+  border-radius: 8px;
+  border: 3px solid #8B4513;
+  flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.mascota-card article {
+  flex: 1; /* El texto ocupa todo el espacio restante */
+}
+
+.mascota-card h2 {
+  margin-top: 0;
+  color: #8B4513;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.mascota-card .parrafo p {
+  line-height: 1.6;
+  color: #2c1e12;
+  font-size: 16px;
+}
+/* --- BARRA DE NAVEGACIÓN ESTILO PERGAMINO --- */
+.texto h1 {
+  margin-bottom: 15px; /* Separa el título del nav */
+}
+
+.nav-principal ul {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Pone los links en horizontal */
+  gap: 12px; /* Espacio entre links */
+  flex-wrap:nowrap; /* Si no caben, bajan */
+  justify-content: flex-start;
+}
+
+.nav-principal a {
+  text-decoration: none;
+  color: #F5DEB3; /* Texto color trigo/pergamino claro */
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px 14px;
+  background-color: #5C3317; /* Madera oscura */
+  border: 2px solid #3E2723; /* Borde más oscuro para profundidad */
+  border-radius: 3px;
+  box-shadow: 2px 3px 0px #3E2723, inset 0 1px 0 rgba(255,255,255,0.2);
+  transition: all 0.1s ease;
+  white-space: nowrap;
+  text-shadow: 1px 1px 1px #000; /* Texto con sombra para que resalte */
+}
+
+.nav-principal a:hover {
+  background-color: #8B4513; /* Se aclara al pasar el mouse */
+  color: #FFD700; /* Dorado como tus STATS */
+  transform: translateY(1px); /* Efecto de botón presionado */
+  box-shadow: 1px 2px 0px #3E2723, inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+/* Para que el scroll al hacer click sea suave */
+html {
+  scroll-behavior: smooth;
+}
+.texto {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%; /* Ocupa todo el ancho */
+  box-sizing: border-box; /* Para que el padding no lo desborde */
+  background: linear-gradient(to bottom, #A0522D 0%, #8B4513 50%, #6B3410 100%);
+  padding: 15px 40px; /* Más padding lateral para que no pegue al borde */
+  border-bottom: 4px solid #3E2723;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.texto h1 {
+  color: #FFD700; /* Título dorado para que se lea en la madera */
+  text-shadow: 2px 2px 2px #000;
+  margin: 0;
+}
+
+/* --- BOTÓN HAMBURGUESA --- */
+.menu-toggle {
+  display: none; /* Oculto en PC */
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-toggle .barra {
+  width: 25px;
+  height: 3px;
+  background-color: #FFD700; /* Dorado */
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+
+
+/* Animación de la hamburguesa a X cuando está abierto */
+.menu-toggle.activo .barra:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.activo .barra:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.activo .barra:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+  
+  
+
+
+
+
+/* --- SECCIÓN SOBRE MI --- */
+#sobre-mi h2{
+  text-align: left;
+}
+.sobre-mi-cont {
+  display: flex; /* Pone imagen y texto en fila */
+  align-items: flex-start; /* Alinea arriba, por si un texto es más largo */
+  gap: 35px; /* Espacio entre la foto y el párrafo */
+  margin-top: 25px;
+}
+
+.foto-perfil {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #8B4513; /* Borde madera para seguir el tema */
+  flex-shrink: 0; /* Evita que la imagen se encoja si el texto es muy largo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin-top: 5px;
+}
+
+.sobre-mi-tex  {
+  flex: 1;
+  padding-top: 30px;
+ 
+}
+
+.sobre-mi-tex p {
+  margin: 0 0 12px 0;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.7; 
+}
+
+/* --- RESPONSIVE: TABLET Y CEL --- */
+@media (max-width: 900px) {
+  .texto {
+    flex-wrap: wrap; /* Permite que el nav baje */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .texto h1 {
+    font-size: 28px;
+  }
+
+  /* Muestra la hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+
+ /* Oculta el menú por defecto */
+  .nav-principal {
+    display: none; /* Oculto hasta que le den clic */
+    width: 100%; /* Ocupa todo el ancho debajo */
+    order: 3; /* Se va debajo del título y la hamburguesa */
+  }
+
+  /* Cuando tiene la clase .activo, se muestra */
+  .nav-principal.activo {
+    display: block;
+  }
+
+  .nav-principal ul {
+    flex-direction: column; /* Botones en columna */
+    width: 100%;
+    gap: 0;
+    margin-top: 15px;
+  }
+
+  .nav-principal li {
+    width: 100%;
+  }
+#sobre-mi h2{
+    text-align: center;
+  }
+    .sobre-mi-cont {
+    flex-direction: column; /* Imagen arriba, texto abajo */
+    align-items: center; /* Centra la foto */
+    gap: 20px;
+  }
+  .sobre-mi-tex{
+    padding-top: 0;
+  }
+  .sobre-mi-tex p {
+    text-align: center; /* Texto centrado se ve mejor en móvil */
+    font-size: 16px;
+  }
+  .foto-perfil{
+    width: 140px;
+    height: 140px;
+  }
+
+  .nav-principal a {
+    display: block; /* Que todo el botón sea clickeable */
+    text-align: center;
+    padding: 12px;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  }
+  
+  .nav-principal li:last-child a {
+    border-bottom: none;
+  }
+}
+/* --- RESPONSIVE: SOLO CELULAR CHICO --- */
+@media (max-width: 500px) {
+  .texto h1 {
+    font-size: 26px; /* Aún más chico */
+    line-height: 1.1;
+  }
+
+  .contenedor-principal {
+    padding: 20px; /* Menos padding lateral en móvil */
+  }
+
+  .foto-perfil {
+    width: 120px;
+    height: 120px; /* Foto más chica */
+  }
+
+  h2 {
+    font-size: 26px; /* STATS, PROYECTOS más chicos */
+  }
+  
+  /* Las barras de STATS ocupan todo el ancho */
+  .barra-fondo {
+    width: 100%;
+  }
+}
