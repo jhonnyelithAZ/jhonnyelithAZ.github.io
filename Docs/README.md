@@ -34,13 +34,13 @@ Portafolio web personal con temática de *The Elder Scrolls: Oblivion*. Diseñad
 - *Fix de background-attachment*: Usa scroll en móvil para evitar lag de repintado en iOS/Android.
 - *Assets con image-rendering: pixelated*: Pixel art nítido sin blur.
 
-### 3. *Manipulación Avanzada del DOM*
+### 3. Manipulación Avanzada del DOM
 ```javascript
 // Ejemplo: Cambio de sprite + audio sincronizado
 cofre.addEventListener('click', () => {
   cofre.classList.toggle('abierto');
-  imagenCofre.src = cofre.classList.contains('abierto') 
-    ? 'cofre-abierto.png' 
+  imagenCofre.src = cofre.classList.contains('abierto')
+    ? 'cofre-abierto.png'
     : 'cofre-cerrado.png';
   sonidoAbrir.currentTime = 0;
   sonidoAbrir.play();
