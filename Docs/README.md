@@ -45,6 +45,7 @@ cofre.addEventListener('click', () => {
   sonidoAbrir.currentTime = 0;
   sonidoAbrir.play();
 });
+```
 
 
 ---
