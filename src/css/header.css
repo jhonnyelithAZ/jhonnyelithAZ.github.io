@@ -1,0 +1,79 @@
+.texto {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%; /* Ocupa todo el ancho */
+  box-sizing: border-box; /* Para que el padding no lo desborde */
+  background: linear-gradient(to bottom, #A0522D 0%, #8B4513 50%, #6B3410 100%);
+  padding: 15px 40px; /* Más padding lateral para que no pegue al borde */
+  border-bottom: 4px solid #3E2723;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* --- BARRA DE NAVEGACIÓN ESTILO PERGAMINO --- */
+.texto h1 {
+  margin-bottom: 15px; /* Separa el título del nav */
+}
+.texto h1 {
+  color: #FFD700; /* Título dorado para que se lea en la madera */
+  text-shadow: 2px 2px 2px #000;
+  margin: 0;
+}
+.texto h1 {
+  font-family: 'Cinzel', serif;
+  color: #FFD700; /* Dorado */
+  text-shadow: 2px 2px 4px #000;
+}
+
+.nav-principal a {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* About me -> ABOUT ME */
+  font-size: 14px; /* Más chico porque las mayúsculas ocupan más */
+  /* ... el resto de estilos que ya tienes ... */
+}
+.nav-principal ul {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Pone los links en horizontal */
+  gap: 12px; /* Espacio entre links */
+  flex-wrap:nowrap; /* Si no caben, bajan */
+  justify-content: flex-start;
+}
+
+.nav-principal a {
+  text-decoration: none;
+  color: #F5DEB3; /* Texto color trigo/pergamino claro */
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px 14px;
+  background-color: #5C3317; /* Madera oscura */
+  border: 2px solid #3E2723; /* Borde más oscuro para profundidad */
+  border-radius: 3px;
+  box-shadow: 2px 3px 0px #3E2723, inset 0 1px 0 rgba(255,255,255,0.2);
+  transition: all 0.1s ease;
+  white-space: nowrap;
+  text-shadow: 1px 1px 1px #000; /* Texto con sombra para que resalte */
+}
+
+.nav-principal a:hover {
+  background-color: #8B4513; /* Se aclara al pasar el mouse */
+  color: #FFD700; /* Dorado como tus STATS */
+  transform: translateY(1px); /* Efecto de botón presionado */
+  box-shadow: 1px 2px 0px #3E2723, inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.menu-toggle {
+  display: none; /* Oculto en PC */
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+

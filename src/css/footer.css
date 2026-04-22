@@ -1,0 +1,59 @@
+/* ===== FOOTER ESTILO OBLIVION ===== */
+.footer-principal {
+  background-color: #1a1a1a; /* Negro pergamino oscuro */
+  color: #d4c8a8; /* Texto color pergamino */
+  padding: 3rem 1.5rem 1rem 1.5rem;
+  border-top: 2px solid #5c4d2f; /* Borde dorado viejo */
+  font-family: 'TuFuenteOblivion', serif; /* Cambia por tu fuente */
+}
+
+.contenedor-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-columna h3,
+.footer-columna h4 {
+  color: #c8b568; /* Dorado Oblivion para títulos */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-columna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-columna ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-columna a,
+.footer-redes a {
+  color: #d4c8a8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-columna a:hover,
+.footer-redes a:hover {
+  color: #c8b568; /* Brillo dorado al pasar el mouse */
+}
+
+.footer-redes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-copy {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #5c4d2f;
+  font-size: 0.9rem;
+  color: #8a7e60;
+}

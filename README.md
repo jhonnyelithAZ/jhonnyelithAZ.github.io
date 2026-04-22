@@ -64,8 +64,8 @@ cofre.addEventListener('click', () => {
    
    O simplemente abre index.html en tu navegador.
 
----
 
+```
 ## 📂 Estructura del Proyecto
 
 /
@@ -81,39 +81,37 @@ cofre.addEventListener('click', () => {
 │       ├── cofre-abrir.mp3
 │       └── cofre-cerrar.mp3
 └── README.md
----
+```
 
-# 🎯 Decisiones Técnicas y Aprendizajes
+## 🎯 Decisiones Técnicas y Aprendizajes
 
 | # | Problema | Solución | Concepto Aprendido |
 | --- | --- | --- | --- |
-| *1* | Fondo lento en móvil + flash blanco | rel="preload" + imagen <300KB + background-color base | *Critical Rendering Path* |
-| *2* | Lag con fixed en iOS | Media query @media (max-width: 900px) → scroll | *Renderizado WebKit vs Chromium* |
-| *3* | Audio no repetía con spam-click | audio.currentTime = 0 antes de play() | *HTML5 Audio API* |
-| *4* | Pixel art borroso al escalar | image-rendering: pixelated | *Renderizado de imágenes* |
-| *5* | Demostrar bases sin librerías | 100% *JavaScript Vanilla* | *Manipulación directa del DOM* |
-| *6* | Estructura desordenada | Carpetas /public/img y /public/audio | *Arquitectura de archivos* |
+| **1** | Fondo lento en móvil + flash blanco | `rel="preload"` + imagen <300KB + `background-color` base | **Critical Rendering Path** |
+| **2** | Lag con `fixed` en iOS | Media query `@media (max-width: 900px)` → `scroll` | **Renderizado WebKit vs Chromium** |
+| **3** | Audio no repetía con spam-click | `audio.currentTime = 0` antes de `play()` | **HTML5 Audio API** |
+| **4** | Pixel art borroso al escalar | `image-rendering: pixelated` | **Renderizado de imágenes** |
+| **5** | Demostrar bases sin librerías | 100% **JavaScript Vanilla** | **Manipulación directa del DOM** |
+| **6** | Estructura desordenada | Carpetas `/public/img` y `/public/audio` | **Arquitectura de archivos** |
 
 ---
 
 ## 🗺️ Roadmap / Próximas Mejoras
 
-- [ ] Sistema de partículas: Añadir polvo flotando con Canvas para más inmersión.
-- [ ] Cursor personalizado: Cambiar el cursor por una espada o cursor de Oblivion.
-- [ ] Modo "Encantar objeto": Efecto hover en los links de proyectos con brillo.
-- [ ] Migrar a Vite: Para modularizar el JS sin perder el enfoque vanilla.
+- [ ] **Sistema de partículas**: Añadir polvo flotando con Canvas para más inmersión.
+- [ ] **Cursor personalizado**: Cambiar el cursor por una espada o cursor de Oblivion.
+- [ ] **Modo "Encantar objeto"**: Efecto hover en los links de proyectos con brillo.
+- [ ] **Migrar a Vite**: Para modularizar el JS sin perder el enfoque vanilla.
 
 ---
 
-## 📫 Contacto
+## 📬 Contacto
 
 | Medio | Información | Link Directo |
 | --- | --- | --- |
-| *Nombre* | Jhonatan Ayala | - |
-| *Rol* | Develop | - |
-| *GitHub* | @jhonnyelithAZ | [github.com/jhonnyelithAZ](https://github.com/jhonnyelithAZ) |
-| *Email* | jhonatanayala3478@gmail.com| [Enviar correo](mailto:jhonatanayala3478@gmail.com) |
-| *Portafolio* | Demo en vivo | [jhonnyelithaz.github.io](https://jhonnyelithaz.github.io/) |
-| *Ubicación* | Barranquilla, Atlántico, Colombia | - |
-
----
+| **Nombre** | Jhonatan Ayala | |
+| **Rol** | Frontend Developer | |
+| **GitHub** | @jhonnyelithAZ | [Ver perfil](https://github.com/jhonnyelithAZ) |
+| **Email** | jhonatanayala3478@gmail.com | [Enviar correo](mailto:jhonatanayala3478@gmail.com) |
+| **Portafolio** | Demo en vivo | [jhonnyelithaz.github.io](https://jhonnyelithaz.github.io) |
+| **Ubicación** | Barranquilla, Atlántico, Colombia | |
