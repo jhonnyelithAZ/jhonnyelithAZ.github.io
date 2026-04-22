@@ -1,0 +1,36 @@
+.mascota-card {
+  display: flex; /* Esto pone imagen y texto lado a lado */
+  gap: 30px; /* Espacio entre la imagen y el texto */
+  align-items: flex-start; /* Alinea todo arriba */
+  margin-bottom: 40px; /* Espacio entre Kirby y Agumon */
+  background-color: rgba(0, 0, 0, 0.15); /* Fondo sutil tipo pergamino */
+  border: 2px solid #8B4513;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.mascota-img {
+  width: 200px; /* Ancho fijo para todas las imágenes */
+  height: 200px;
+  object-fit: cover; /* Para que no se deformen */
+  border-radius: 8px;
+  border: 3px solid #8B4513;
+  flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.mascota-card article {
+  flex: 1; /* El texto ocupa todo el espacio restante */
+}
+
+.mascota-card h2 {
+  margin-top: 0;
+  color: #8B4513;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.mascota-card .parrafo p {
+  line-height: 1.6;
+  color: #2c1e12;
+  font-size: 16px;
+}
