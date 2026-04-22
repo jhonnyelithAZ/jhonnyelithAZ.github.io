@@ -11,9 +11,8 @@
     <!-- FUENTES ESTILO OBLIVION -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"rel="stylesheet">
+    <link rel="preload" as="image"  href="public/img/back.webp">
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -46,12 +45,12 @@
 
             <section id="sobre-mi">
 
-                <h2>Sobre mi</h2>
+                <h2>Sobre mí</h2>
                 <div class="sobre-mi-cont">
 
                     <img src="public/img/me.webp" alt="jeas" class="foto-perfil">
                     <div class="sobre-mi-tex">
-                        <p>Mi nombre es jhonatan ayala,soy coder en formacion,actualmente me encuentro realizando una
+                        <p>Mi nombre es Jhonatan Ayala,soy coder en formacion,actualmente me encuentro realizando una
                             actividad
                             para practicar HTML y CSS.<br>
                             Este es el proposito de la existencia de esta pagina web.
@@ -69,7 +68,7 @@
                 <!-- El cofre que hace de botón -->
                 <div class="cofre-proyectos">
                     <h3 class="titulo-cofre">PROYECTOS</h3>
-                    <div class="icono-cofre">📦</div> <!-- Cambia por img si tienes una de cofre -->
+                    <img src="public/img/cofre-cerrado.png" class="icono-cofre" alt="Cofre de proyectos">
                     <p class="texto-cofre">Haz clic para abrir el cofre</p>
                 </div>
 
@@ -173,6 +172,11 @@
 
 
     </div>
+
+    <!-- Efectos de sonido del cofre -->
+    <audio id="sonido-abrir" src="public/sound/cofre-abrir.mp3" preload="auto"></audio>
+    <audio id="sonido-cerrar" src="public/sound/cofre-cerrar.mp3" preload="auto"></audio>
+
     <script src="script.js"></script>
 </body>
 
