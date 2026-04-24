@@ -8,17 +8,13 @@
     <meta name="keywords" content="about me, mascotas, amigos perrunos">
     <meta name="description" content="portafolio personal del jeas">
     <title>Portafolio JEAS</title>
-    <!-- FUENTES ESTILO OBLIVION -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
     <link rel="preload" as="image" href="/public/img/back.webp">
-    <link rel="stylesheet" href="/src/css/styles.css">
-    <link rel="stylesheet" href="/src/css/header.css">
-    <link rel="stylesheet" href="/src/css/main.css">
-    <link rel="stylesheet" href="/src/css/footer.css">
+    <link rel="stylesheet" href="/src/css/style-min.css">
     <link rel="stylesheet" href="/src/css/celphone.css">
 </head>
 
@@ -142,33 +138,48 @@
                 </div>
             </section>
 
-            <section id="contactos">
-                <h3>Contactos</h3>
-                <form action="" method="post">
-                    <br>
-                    <div class="form-group">
-                        <label for="nombre">Nombre del visitante:</label>
-                        <input type="text" id="nombre" name="nombre" required>
+            <section class="contactos-section">
+                <h2>CONTACTOS</h2>
+                <div class="contacto-container">
+                    <form class="contacto-form">
+                        <div class="input-group">
+                            <label for="nombre">Nombre del visitante:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre, aventurero..."
+                                required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="telefono">Teléfono o celular:</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 123 4567">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" placeholder="tu@email.com" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="4"
+                                placeholder="Deja tu mensaje en este pergamino..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                    </form>
+
+                    <div class="contacto-info">
+                        <h3>Otros canales</h3>
+                        <a href="mailto:jhonatanayala3478@gmail.com" class="contacto-link">
+                            <span class="icon">📜</span> jhonatanayala3478@gmail.com
+                        </a>
+                        <a href="https://github.com/jhonnyelithAZ" target="_blank" class="contacto-link">
+                            <span class="icon">⚔️</span> GitHub: @jhonnyelithAZ
+                        </a>
+                        <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contacto-link">
+                            <span class="icon">🛡️</span> LinkedIn
+                        </a>
                     </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="tel">Telefono o celular:</label>
-                        <input type="number" name="tel" id="tel">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="correo">Correo electronico:</label>
-                        <input type="email" name="correo" id="correo" required>
-                    </div>
-                    <div class="form-group">
-                        <label></label>
-                        <button type="submit">Enviar</button>
-                    </div>
-                </form>
-            </section>
-            <br>
-            <section id="mascotas">
-                <h2><a href="/src/views/mascotas.html">Mascotas</a></h2>
+                </div>
             </section>
         </main>
 

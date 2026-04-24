@@ -1,7 +1,6 @@
 @media (max-width: 900px) {
   .texto {
     flex-wrap: wrap;
-    /* Permite que el nav baje */
     justify-content: space-between;
     align-items: center;
   }
@@ -10,29 +9,23 @@
     font-size: 28px;
   }
 
-  /* Muestra la hamburguesa */
+  /* Hamburger Menu */
   .menu-toggle {
     display: flex;
   }
 
-  /* Oculta el menú por defecto */
   .nav-principal {
     display: none;
-    /* Oculto hasta que le den clic */
     width: 100%;
-    /* Ocupa todo el ancho debajo */
     order: 3;
-    /* Se va debajo del título y la hamburguesa */
   }
 
-  /* Cuando tiene la clase .activo, se muestra */
   .nav-principal.activo {
     display: block;
   }
 
   .nav-principal ul {
     flex-direction: column;
-    /* Botones en columna */
     width: 100%;
     gap: 0;
     margin-top: 15px;
@@ -48,9 +41,7 @@
 
   .sobre-mi-cont {
     flex-direction: column;
-    /* Imagen arriba, texto abajo */
     align-items: center;
-    /* Centra la foto */
     gap: 20px;
   }
 
@@ -60,7 +51,6 @@
 
   .sobre-mi-tex p {
     text-align: center;
-    /* Texto centrado se ve mejor en móvil */
     font-size: 16px;
   }
 
@@ -71,7 +61,6 @@
 
   .nav-principal a {
     display: block;
-    /* Que todo el botón sea clickeable */
     text-align: center;
     padding: 12px;
     border-radius: 0;
@@ -95,18 +84,28 @@
     align-items: center;
   }
 
+  .contacto-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-info {
+    padding-left: 0;
+    padding-top: 20px;
+    border-left: none;
+    border-top: 2px solid #8B4513;
+  }
+
 }
 
 .menu-toggle .barra {
   width: 25px;
   height: 3px;
   background-color: #FFD700;
-  /* Dorado */
   transition: 0.3s;
   border-radius: 2px;
 }
 
-/* Animación de la hamburguesa a X cuando está abierto */
+
 .menu-toggle.activo .barra:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
