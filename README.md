@@ -1,42 +1,41 @@
-# ⚔️ Portafolio RPG - Jhonatan Ayala
+# ⚔️ RPG Portfolio - Jhonatan Ayala
 
-Portafolio web personal con temática de *The Elder Scrolls: Oblivion*. Diseñado para mostrar proyectos de desarrollo mientras se mantiene una experiencia inmersiva de RPG clásico.
+Personal web portfolio with a The Elder Scrolls: Oblivion-inspired theme. Designed to showcase development projects while maintaining an immersive classic RPG experience.
 
-**[🔗 Ver Demo en Vivo](https://jhonnyelithaz.github.io/)** | 
+**[🔗 Live Demo](https://jhonnyelithaz.github.io/)** | 
 
-![Preview del Portafolio](public/img/demo-cofre.gif)
-
+![Portfolio Preview](public/img/demo-cofre.gif)
 
 ---
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Tech Stack
 
-| Tecnología | Uso en el proyecto |
+| Technology | Usage in the Project |
 | --- | --- |
-| *HTML5* | Estructura semántica y accesible |
-| *CSS3* | Estilos, animaciones, responsive design, temática pergamino |
-| *JavaScript Vanilla* | Manipulación del DOM, eventos, efectos de sonido |
-| *Git / GitHub* | Control de versiones y deploy |
+| *HTML5* | Semantic and accessible structure |
+| *CSS3* | Styles, animations, responsive design, parchment theme |
+| *Vanilla JavaScript* | DOM manipulation, events, sound effects |
+| *Git / GitHub* | Version control and deployment |
 
-*Sin frameworks*: Proyecto 100% vanilla para demostrar dominio de las bases de la web.
+*No frameworks*: 100% vanilla project to demonstrate mastery of web fundamentals.
 
 ---
 
-## ✨ Características Principales
+## ✨ Key Features
 
-### 1. *Interfaz Diegética RPG*
-- *Fondo de pergamino antiguo*: Optimizado en .webp con preload para carga instantánea en móvil.
-- *Cofre de proyectos interactivo*: Componente hecho con JS que cambia sprite y reproduce audio al abrir/cerrar.
-- *Tipografía temática*: Fuentes estilo medieval para reforzar la inmersión.
+### 1. *Diegetic RPG Interface*
+- *Ancient parchment background*: Optimized .webp with preload for instant mobile loading.
+- *Interactive project chest*: JS component that changes sprite and plays audio on open/close.
+- *Thematic typography*: Medieval-style fonts to enhance immersion.
 
-### 2. *Código Optimizado para Móviles*
-- *Renderizado < 1s*: Imagen de fondo < 300KB + color base para evitar flash blanco.
-- *Fix de background-attachment*: Usa scroll en móvil para evitar lag de repintado en iOS/Android.
-- *Assets con image-rendering: pixelated*: Pixel art nítido sin blur.
+### 2. *Mobile-Optimized Code*
+- *Render < 1s*: Background image < 300KB + base color to avoid white flash.
+- *`background-attachment` fix*: Uses `scroll` on mobile to prevent repaint lag on iOS/Android.
+- *Assets with `image-rendering: pixelated`*: Crisp pixel art without blur.
 
-### 3. Manipulación Avanzada del DOM
+### 3. Advanced DOM Manipulation
 ```javascript
-// Ejemplo: Cambio de sprite + audio sincronizado
+// Example: Sprite change + synchronized audio
 cofre.addEventListener('click', () => {
   cofre.classList.toggle('abierto');
   imagenCofre.src = cofre.classList.contains('abierto')
@@ -47,34 +46,36 @@ cofre.addEventListener('click', () => {
 });
 ```
 
-
 ---
 
-## 🚀 Instalación y Uso Local
+## 🚀 Local Installation & Usage
 
-1. Clona el repositorio
+1. Clone the repository
+   ```bash
    git clone https://github.com/jhonnyelithAZ/jhonnyelithAZ.github.io.git
+   ```
 
-2. Entra a la carpeta
+2. Navigate to the folder
+   ```bash
    cd jhonnyelithAZ.github.io
+   ```
 
-3. Abre con Live Server
+3. Open with Live Server
    
-   Si usas VS Code, instala la extensión Live Server y dale clic derecho a index.html > Open with Live Server.
+   If you use VS Code, install the Live Server extension and right-click `index.html` > Open with Live Server.
    
-   O simplemente abre index.html en tu navegador.
+   Or simply open `index.html` in your browser.
 
+## 📂 Project Structure
 
 ```
-## 📂 Estructura del Proyecto
-
 /
-├── index.html              # Estructura principal
-├── styles.css              # Todos los estilos y media queries
-├── script.js               # Lógica del cofre y eventos del DOM
+├── index.html              # Main structure
+├── styles.css              # All styles and media queries
+├── script.js               # Chest logic and DOM events
 ├── public/
 │   ├── img/
-│   │   ├── back.webp       # Fondo pergamino optimizado
+│   │   ├── back.webp       # Optimized parchment background
 │   │   ├── cofre-cerrado.png
 │   │   └── cofre-abierto.png
 │   └── audio/
@@ -83,35 +84,35 @@ cofre.addEventListener('click', () => {
 └── README.md
 ```
 
-## 🎯 Decisiones Técnicas y Aprendizajes
+## 🎯 Technical Decisions & Learnings
 
-| # | Problema | Solución | Concepto Aprendido |
+| # | Problem | Solution | Learned Concept |
 | --- | --- | --- | --- |
-| **1** | Fondo lento en móvil + flash blanco | `rel="preload"` + imagen <300KB + `background-color` base | **Critical Rendering Path** |
-| **2** | Lag con `fixed` en iOS | Media query `@media (max-width: 900px)` → `scroll` | **Renderizado WebKit vs Chromium** |
-| **3** | Audio no repetía con spam-click | `audio.currentTime = 0` antes de `play()` | **HTML5 Audio API** |
-| **4** | Pixel art borroso al escalar | `image-rendering: pixelated` | **Renderizado de imágenes** |
-| **5** | Demostrar bases sin librerías | 100% **JavaScript Vanilla** | **Manipulación directa del DOM** |
-| **6** | Estructura desordenada | Carpetas `/public/img` y `/public/audio` | **Arquitectura de archivos** |
+| **1** | Slow background on mobile + white flash | `rel="preload"` + image <300KB + `background-color` base | **Critical Rendering Path** |
+| **2** | Lag with `fixed` on iOS | Media query `@media (max-width: 900px)` → `scroll` | **WebKit vs Chromium Rendering** |
+| **3** | Audio didn't repeat on spam-click | `audio.currentTime = 0` before `play()` | **HTML5 Audio API** |
+| **4** | Pixel art blurry when scaled | `image-rendering: pixelated` | **Image Rendering** |
+| **5** | Demonstrate fundamentals without libraries | 100% **Vanilla JavaScript** | **Direct DOM Manipulation** |
+| **6** | Messy structure | `/public/img` and `/public/audio` folders | **File Architecture** |
 
 ---
 
-## 🗺️ Roadmap / Próximas Mejoras
+## 🗺️ Roadmap / Next Improvements
 
-- [ ] **Sistema de partículas**: Añadir polvo flotando con Canvas para más inmersión.
-- [ ] **Cursor personalizado**: Cambiar el cursor por una espada o cursor de Oblivion.
-- [ ] **Modo "Encantar objeto"**: Efecto hover en los links de proyectos con brillo.
-- [ ] **Migrar a Vite**: Para modularizar el JS sin perder el enfoque vanilla.
+- [ ] **Particle system**: Add floating dust with Canvas for more immersion.
+- [ ] **Custom cursor**: Change cursor to a sword or Oblivion-style cursor.
+- [ ] **"Enchant item" mode**: Hover effect on project links with a glow.
+- [ ] **Migrate to Vite**: To modularize JS without losing the vanilla focus.
 
 ---
 
-## 📬 Contacto
+## 📬 Contact
 
-| Medio | Información | Link Directo |
+| Method | Information | Direct Link |
 | --- | --- | --- |
-| **Nombre** | Jhonatan Ayala | |
-| **Rol** | Frontend Developer | |
-| **GitHub** | @jhonnyelithAZ | [Ver perfil](https://github.com/jhonnyelithAZ) |
-| **Email** | jhonatanayala3478@gmail.com | [Enviar correo](mailto:jhonatanayala3478@gmail.com) |
-| **Portafolio** | Demo en vivo | [jhonnyelithaz.github.io](https://jhonnyelithaz.github.io) |
-| **Ubicación** | Barranquilla, Atlántico, Colombia | |
+| **Name** | Jhonatan Ayala | |
+| **Role** | Frontend Developer | |
+| **GitHub** | @jhonnyelithAZ | [View profile](https://github.com/jhonnyelithAZ) |
+| **Email** | jhonatanayala3478@gmail.com | [Send email](mailto:jhonatanayala3478@gmail.com) |
+| **Portfolio** | Live demo | [jhonnyelithaz.github.io](https://jhonnyelithaz.github.io) |
+| **Location** | Barranquilla, Atlántico, Colombia | |
