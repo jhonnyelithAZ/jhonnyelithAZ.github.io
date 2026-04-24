@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+  /* Prevent padding from breaking the layout */
+}
 /* =====Oblivion-style footer===== */
 .footer-principal {
   background-color: #1a1a1a;

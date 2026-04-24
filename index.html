@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
-    <link rel="preload" as="image" href="/public/img/back.webp">
+
     <link rel="stylesheet" href="/src/css/style-min.css">
     <link rel="stylesheet" href="/src/css/celphone.css">
 </head>
@@ -138,10 +138,13 @@
                 </div>
             </section>
 
-            <section class="contactos-section">
+            <!-- SECCIÓN CONTACTOS -->
+            <section class="contactos-section" id="contactos">
                 <h2>CONTACTOS</h2>
+
                 <div class="contacto-container">
-                    <form class="contacto-form">
+                    <!-- FORMULARIO -->
+                    <form class="contacto-form" id="form-contacto">
                         <div class="input-group">
                             <label for="nombre">Nombre del visitante:</label>
                             <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre, aventurero..."
@@ -167,20 +170,28 @@
                         <button type="submit" class="btn-enviar">Enviar Mensaje</button>
                     </form>
 
+                    <!-- OTROS CANALES -->
                     <div class="contacto-info">
                         <h3>Otros canales</h3>
+
                         <a href="mailto:jhonatanayala3478@gmail.com" class="contacto-link">
-                            <span class="icon">📜</span> jhonatanayala3478@gmail.com
+                            <span class="icon">📜</span>
+                            <span>jhonatanayala3478@gmail.com</span>
                         </a>
+
                         <a href="https://github.com/jhonnyelithAZ" target="_blank" class="contacto-link">
-                            <span class="icon">⚔️</span> GitHub: @jhonnyelithAZ
+                            <span class="icon">⚔️</span>
+                            <span>GitHub: @jhonnyelithAZ</span>
                         </a>
+
                         <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contacto-link">
-                            <span class="icon">🛡️</span> LinkedIn
+                            <span class="icon">🛡️</span>
+                            <span>LinkedIn</span>
                         </a>
                     </div>
                 </div>
             </section>
+
         </main>
 
 

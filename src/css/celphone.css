@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 @media (max-width: 900px) {
   .texto {
     flex-wrap: wrap;
@@ -84,36 +88,174 @@
     align-items: center;
   }
 
+
+  .menu-toggle .barra {
+    width: 25px;
+    height: 3px;
+    background-color: #FFD700;
+    transition: 0.3s;
+    border-radius: 2px;
+  }
+
+
+  .menu-toggle.activo .barra:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.activo .barra:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.activo .barra:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .contactos-section,
+  .contactos-section {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .contactos-section {
+    width: 100%;
+    padding: 20px 8px;
+    margin: 20px 0;
+    overflow: hidden;
+  }
+
+  .contactos-section h2 {
+    text-align: center;
+    color: #6B4423;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
   .contacto-container {
-    grid-template-columns: 1fr;
+    display: block;
+    width: 100%;
+    background: rgba(40, 25, 15, 0.25);
+    border: 2px solid #6B4423;
+    border-radius: 4px;
+    padding: 15px 10px;
+  }
+
+  .contacto-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input-group label {
+    display: block;
+    color: #2A1F15;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 8px;
+    background: #FFF5E1;
+    border: 2px solid #8B4513;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #000;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .input-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .btn-enviar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #8B4513;
+    border: 2px solid #4A3018;
+    border-radius: 2px;
+    color: #FFD700;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   .contacto-info {
-    padding-left: 0;
-    padding-top: 20px;
-    border-left: none;
-    border-top: 2px solid #8B4513;
+    width: 100%;
+    padding-top: 15px;
+    border-top: 2px solid #6B4423;
+  }
+
+  .contacto-info h3 {
+    text-align: center;
+    color: #2A1F15;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .contacto-link {
+    display: block;
+    width: 100%;
+    padding: 10px 8px;
+    margin-bottom: 8px;
+    background: #FFF5E1;
+    border: 2px solid #8B4513;
+    border-radius: 2px;
+    color: #2A1F15;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  .contacto-link:last-child {
+    margin-bottom: 0;
+  }
+
+  .contacto-link .icon {
+    margin-right: 6px;
   }
 
 }
 
-.menu-toggle .barra {
-  width: 25px;
-  height: 3px;
-  background-color: #FFD700;
-  transition: 0.3s;
-  border-radius: 2px;
+/* iPhone 12 Pro: 390px */
+@media (max-width: 390px) {
+  .contactos-section {
+    padding: 15px 6px;
+  }
+
+  .contacto-container {
+    padding: 12px 6px;
+  }
+
+  .contactos-section h2 {
+    font-size: 22px;
+  }
+
+  .contacto-link {
+    font-size: 10px;
+  }
 }
 
+/* iPhone SE: 320px */
+@media (max-width: 320px) {
+  .contacto-container {
+    padding: 10px 5px;
+  }
 
-.menu-toggle.activo .barra:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.activo .barra:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.activo .barra:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
+  .contacto-link {
+    font-size: 9px;
+  }
 }

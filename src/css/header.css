@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+  /* Prevent padding from breaking the layout */
+}
 .texto {
   position: sticky;
   top: 0;
